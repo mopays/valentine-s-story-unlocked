@@ -159,9 +159,10 @@ const RevealPage = () => {
           {/* Hidden Image */}
           <div className="absolute inset-0 bg-gradient-to-br from-rose-light via-blush to-rose-light flex items-center justify-center">
             <div className="text-center p-6">
-              <Heart className="w-24 h-24 mx-auto mb-4 text-rose-dark fill-rose animate-heartbeat" />
+              {/* <Heart className="w-24 h-24 mx-auto mb-4 text-rose-dark fill-rose animate-heartbeat" />
               <p className="font-serif text-2xl text-foreground mb-2">รักนะ ❤️</p>
-              <p className="text-muted-foreground">เธอคือคนพิเศษของฉัน</p>
+              <p className="text-muted-foreground">เธอคือคนพิเศษของฉัน</p> */}
+              <img src="Image1.jpeg" alt="image is procress" />
             </div>
           </div>
 

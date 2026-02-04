@@ -4,7 +4,7 @@ import { Heart, Delete, Lock } from 'lucide-react';
 import FloatingHearts from '@/components/FloatingHearts';
 
 // Hardcoded password - change this to your desired password
-const CORRECT_PASSWORD = '1234';
+const CORRECT_PASSWORD = '291264';
 
 const PasswordPage = () => {
   const navigate = useNavigate();
@@ -26,7 +26,6 @@ const PasswordPage = () => {
             navigate('/reveal');
           }, 500);
         } else {
-          // Wrong password
           setError(true);
           setShake(true);
           setTimeout(() => {
