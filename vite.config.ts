@@ -3,9 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/valentine-s-story-unlocked/",
+  base: "/valentine-s-story-unlocked/",   // ✅ สำคัญที่สุด (GitHub Pages path)
 
   server: {
     host: "::",
