@@ -2,95 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 20 33% 98%;
+    --foreground: 350 30% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 20 40% 97%;
+    --card-foreground: 350 30% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 20 40% 97%;
+    --popover-foreground: 350 30% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 350 60% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 350 30% 90%;
+    --secondary-foreground: 350 30% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 20 20% 94%;
+    --muted-foreground: 350 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 350 70% 45%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 350 25% 88%;
+    --input: 350 25% 88%;
+    --ring: 350 60% 65%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Custom Valentine colors */
+    --rose: 350 60% 65%;
+    --rose-light: 350 50% 85%;
+    --rose-dark: 350 70% 45%;
+    --cream: 30 50% 96%;
+    --blush: 10 60% 92%;
+    --burgundy: 350 80% 30%;
+    --gold: 40 70% 55%;
+
+    /* Gradients */
+    --gradient-romantic: linear-gradient(135deg, hsl(350 50% 85%) 0%, hsl(20 40% 95%) 50%, hsl(350 60% 90%) 100%);
+    --gradient-love: linear-gradient(180deg, hsl(350 60% 65%) 0%, hsl(350 70% 45%) 100%);
+    --gradient-soft: linear-gradient(135deg, hsl(20 33% 98%) 0%, hsl(350 30% 95%) 100%);
+
+    /* Shadows */
+    --shadow-romantic: 0 10px 40px -10px hsl(350 60% 65% / 0.3);
+    --shadow-soft: 0 4px 20px -5px hsl(350 30% 50% / 0.15);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 350 30% 8%;
+    --foreground: 20 30% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 350 25% 12%;
+    --card-foreground: 20 30% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 350 25% 12%;
+    --popover-foreground: 20 30% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 350 55% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 350 25% 18%;
+    --secondary-foreground: 20 30% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 350 20% 18%;
+    --muted-foreground: 350 15% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 350 60% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 350 20% 20%;
+    --input: 350 20% 20%;
+    --ring: 350 55% 60%;
+
+    --rose: 350 55% 60%;
+    --rose-light: 350 40% 30%;
+    --rose-dark: 350 60% 40%;
+    --cream: 30 20% 15%;
+    --blush: 10 30% 18%;
+    --burgundy: 350 60% 50%;
+    --gold: 40 60% 50%;
   }
 }
 
@@ -100,6 +109,142 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Noto Sans Thai', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .valentine-gradient {
+    background: var(--gradient-romantic);
+  }
+
+  .love-button {
+    @apply relative overflow-hidden rounded-full px-8 py-4 font-medium transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--rose)) 0%, hsl(var(--rose-dark)) 100%);
+    color: hsl(var(--primary-foreground));
+    box-shadow: var(--shadow-romantic);
+  }
+
+  .love-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 50px -10px hsl(350 60% 65% / 0.4);
+  }
+
+  .love-button:active {
+    transform: translateY(0);
+  }
+
+  .glass-card {
+    @apply backdrop-blur-md rounded-2xl border;
+    background: hsl(var(--card) / 0.8);
+    border-color: hsl(var(--border) / 0.5);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .text-romantic {
+    color: hsl(var(--rose-dark));
+  }
+
+  .bg-romantic {
+    background: var(--gradient-soft);
+  }
+
+  .keypad-button {
+    @apply w-16 h-16 rounded-full flex items-center justify-center text-2xl font-medium transition-all duration-200;
+    background: hsl(var(--card));
+    color: hsl(var(--foreground));
+    box-shadow: var(--shadow-soft);
+  }
+
+  .keypad-button:hover {
+    background: hsl(var(--rose-light));
+    transform: scale(1.05);
+  }
+
+  .keypad-button:active {
+    transform: scale(0.95);
+  }
+
+  .password-dot {
+    @apply w-4 h-4 rounded-full transition-all duration-300;
+    background: hsl(var(--border));
+  }
+
+  .password-dot.filled {
+    background: hsl(var(--rose-dark));
+    box-shadow: 0 0 10px hsl(350 60% 65% / 0.5);
+  }
+
+  .floating-hearts {
+    position: fixed;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+@layer utilities {
+  .animate-typewriter {
+    overflow: hidden;
+    border-right: 2px solid hsl(var(--rose-dark));
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: hsl(var(--rose-dark)); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
+
+  .animate-heartbeat {
+    animation: heartbeat 1.5s ease-in-out infinite;
   }
 }
